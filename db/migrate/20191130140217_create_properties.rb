@@ -5,10 +5,7 @@ class CreateProperties < ActiveRecord::Migration[6.0]
       t.references :company, null: true, foreign_key: true
       t.string :number
       t.string :type
-      t.integer :floors
-      t.integer :rooms
       t.datetime :constructed_at
-      t.string :seed
 
       t.timestamps
     end

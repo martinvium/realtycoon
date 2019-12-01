@@ -1,6 +1,6 @@
 Company.create!(
   name: "Company 1",
-  cash: 1_000_000
+  cash: 1_000_000_00
 )
 
 city = City.create!(
@@ -22,13 +22,11 @@ city.streets.each do |street|
   (1..5).each do |number|
     property = street.properties.create!(
       number: number,
-      type: "villa",
-      floors: 2,
-      rooms: 4,
+      type: %w[a b c d].sample,
       constructed_at: DateTime.new(1983, 10, 1),
-      seed: "abcd"
     )
 
-    Listing.create!(property: property, price: 250_000)
+    valuation_service = PropertyValuationService.build
+    Listing.create!(property: property, price: valuation_service.value_for(property))
   end
 end

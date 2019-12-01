@@ -1,0 +1,14 @@
+<h1>Properties</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Actions</th>
+  </tr>
+  <% @properties.each do |property| %>
+    <tr>
+      <td><%= property.full_address %></td>
+      <td><%= link_to "Show", property %></td>
+    </tr>
+  <% end %>
+</table>

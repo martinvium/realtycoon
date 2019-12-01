@@ -8,6 +8,6 @@ class Property < ApplicationRecord
   validates :number, uniqueness: {scope: :street}
 
   def full_address
-    "#{street.name}, #{street.city.name}"
+    "#{street.name} #{number}, #{street.city.name}"
   end
 end

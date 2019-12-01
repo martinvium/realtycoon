@@ -41,10 +41,7 @@ ActiveRecord::Schema.define(version: 2019_11_30_142205) do
     t.integer "company_id"
     t.string "number"
     t.string "type"
-    t.integer "floors"
-    t.integer "rooms"
     t.datetime "constructed_at"
-    t.string "seed"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["company_id"], name: "index_properties_on_company_id"
@@ -54,7 +51,7 @@ ActiveRecord::Schema.define(version: 2019_11_30_142205) do
   create_table "streets", force: :cascade do |t|
     t.integer "city_id", null: false
     t.string "name"
-    t.string "appeal"
+    t.integer "appeal"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["city_id"], name: "index_streets_on_city_id"

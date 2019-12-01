@@ -1,0 +1,5 @@
+<h1>Listing</h1>
+
+<p><%= @listing.full_address %></p>
+<p>Price: <%= Money.new(@listing.price).format %></p>
+<p><%= button_to "Buy", listing_path(@listing), method: :put %></p>

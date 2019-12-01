@@ -1,0 +1,21 @@
+property_types:
+  a:
+    size: 100
+    floors: 2
+    rooms: 4
+    value: 2_200_000_00
+  b:
+    size: 90
+    floors: 1
+    rooms: 4
+    value: 2_000_000_00
+  c:
+    size: 120
+    floors: 2
+    rooms: 5
+    value: 3_200_000_00
+  d:
+    size: 75
+    floors: 1
+    rooms: 3
+    value: 1_850_000_00
