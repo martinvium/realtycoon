@@ -22,8 +22,12 @@ class ListingsController < ApplicationController
 
   def update
     listing = Listing.active.find(params[:id])
+    return redirect_to(listings_path, alert: "Not enough funds") if listing.price > current_company.cash
+
     current_company.decrement!(:cash, listing.price)
+    listing.update!(accepted_by: current_company)
     listing.property.update!(company: current_company)
+
     redirect_to property_path(listing.property), notice: "Successfully purchased property"
   end
 

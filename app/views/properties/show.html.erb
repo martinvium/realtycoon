@@ -1,4 +1,6 @@
-<h1>Property</h1>
+<%= render "shared/header" %>
+
+<h2>Property</h2>
 
 <p><%= @property.full_address %></p>
 <p>Est. value: <%= Money.new(@value).format %></p>

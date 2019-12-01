@@ -1,6 +1,6 @@
 Company.create!(
   name: "Company 1",
-  cash: 1_000_000_00
+  cash: 10_000_000_00
 )
 
 city = City.create!(

@@ -1,0 +1,4 @@
+<h1>Real Tycoon</h1>
+
+<p><%= link_to "Properties", properties_path %> | <%= link_to "Listings", listings_path %></p>
+<p>Cash: <%= Money.new(current_company.cash).format %></p>

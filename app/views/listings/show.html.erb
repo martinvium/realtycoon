@@ -1,4 +1,6 @@
-<h1>Listing</h1>
+<%= render "shared/header" %>
+
+<h2>Listing</h2>
 
 <p><%= @listing.full_address %></p>
 <p>Price: <%= Money.new(@listing.price).format %></p>
